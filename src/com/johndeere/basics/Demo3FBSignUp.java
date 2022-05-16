@@ -43,7 +43,7 @@ public class Demo3FBSignUp {
 		
 //		driver.findElement(By.cssSelector("[value='-1']")).click();
 		
-		//click on signup
+		//click on Signup
 		driver.findElement(By.name("websubmit")).click();
 		
 		
