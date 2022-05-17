@@ -43,6 +43,8 @@ public class Demo3Mutlipletabs {
 		//driver will be pointing to the tab with title Citibank India
 		
 		driver.findElement(By.xpath("//div[contains(text(),'Forgot User ID?')]")).click();
+		
+		driver.quit();
 	}
 }
 
