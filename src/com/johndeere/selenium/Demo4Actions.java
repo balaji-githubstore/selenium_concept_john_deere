@@ -18,10 +18,10 @@ public class Demo4Actions {
 		System.setProperty("webdriver.edge.driver", "driver/msedgedriver.exe");
 		
 		
-		ChromeOptions options=new ChromeOptions();
-		options.addArguments("--Headless");
+//		ChromeOptions options=new ChromeOptions();
+//		options.addArguments("--Headless");
 		
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	
 		
@@ -29,13 +29,14 @@ public class Demo4Actions {
 	
 		Actions action=new Actions(driver);
 		
-		action.keyDown(Keys.SHIFT).sendKeys("selenium").keyUp(Keys.SHIFT).pause(1000)
+		action.click(driver.findElement(By.name("q"))).pause(1000)
+		.keyDown(Keys.SHIFT).sendKeys("selenium").keyUp(Keys.SHIFT).pause(1000)
 		.sendKeys(Keys.ARROW_DOWN).pause(1000).sendKeys(Keys.ARROW_DOWN)
 		.pause(1000).sendKeys(Keys.ARROW_DOWN).pause(1000)
 		.sendKeys(Keys.ENTER).build().perform();
 		
 		System.out.println(driver.getTitle());
-		
+				
 		driver.quit();
 		
 		
