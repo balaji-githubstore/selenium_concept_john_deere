@@ -1,4 +1,4 @@
-package com.johndeere.assignments;
+package com.johndeere.selenium;
 
 import java.io.File;
 import java.time.Duration;
@@ -12,7 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Demo2Mutlipletabs {
+public class Demo6Javascript {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
@@ -44,8 +44,7 @@ public class Demo2Mutlipletabs {
 		
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		js.executeScript("document.querySelector('[id=bill-date-long]').value='04/05/2022'");
-		
-				
+						
 		TakesScreenshot ts=(TakesScreenshot) driver;
 		File file= ts.getScreenshotAs(OutputType.FILE);	
 		file.renameTo(new File("error.png"));
