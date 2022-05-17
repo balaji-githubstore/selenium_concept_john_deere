@@ -24,6 +24,6 @@ public class Demo1 {
 		driver.findElement(By.linkText("CONTINUE")).click();
 				
 		
-		//comeout to main html / out of frame
+		driver.switchTo().defaultContent();
 	}
 }
